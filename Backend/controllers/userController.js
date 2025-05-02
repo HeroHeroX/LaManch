@@ -76,5 +76,35 @@ const registerUser = async (req, res) => {
 };
 
 //Admin Login
-const adminLogin = async (req, res) => {};
+// Admin Login
+const adminLogin = async (req, res) => {
+  try {
+    // Lấy email và password từ body
+    const { email, password } = req.body;
+
+    // Kiểm tra email và password có được gửi không
+    if (!email || !password) {
+      return res.status(400).json({ success: false, message: 'Please provide email and password' });
+    }
+
+    // Thông tin admin từ biến môi trường
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const adminPassword = process.env.ADMIN_PASSWORD;
+
+    // Kiểm tra email và password
+    if (email !== adminEmail || password !== adminPassword) {
+      return res.status(401).json({ success: false, message: 'Invalid email or password' });
+    }
+
+    // Tạo JWT token
+    const token = jwt.sign({ email, role: 'admin' }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+    // Trả về token
+    res.status(200).json({ success: true, token });
+  } catch (error) {
+    console.error('Login error:', error);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+};
+
 export { loginUser, registerUser, adminLogin };
