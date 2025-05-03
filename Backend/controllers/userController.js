@@ -76,7 +76,6 @@ const registerUser = async (req, res) => {
 };
 
 //Admin Login
-// Admin Login
 const adminLogin = async (req, res) => {
   try {
     // Lấy email và password từ body
