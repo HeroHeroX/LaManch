@@ -5,3 +5,9 @@
   background-color: #DFDFDC;
   color: black;
 }
+
+select,input,textarea {
+  border: 1px solid black;
+  border-radius: 0.375rem;
+  outline-color: olive;
+}
