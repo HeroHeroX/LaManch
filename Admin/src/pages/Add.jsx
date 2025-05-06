@@ -101,6 +101,11 @@ const Add = ({token}) => {
         <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
 
             <div>
+                <p className='mb-2 text-[20px]'>Product Price</p>
+                <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="Number" placeholder='25'/>
+            </div>
+
+            <div>
                 <p className='mb-2 text-[20px]'>Product Category</p>
                 <select onChange={(e)=>setCategory(e.target.value)} className='w-full px-3 py-2'>
                     <option value="Men">Men</option>
@@ -118,10 +123,6 @@ const Add = ({token}) => {
                 </select>
             </div>
 
-            <div>
-                <p className='mb-2 text-[20px]'>Product Price</p>
-                <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="Number" placeholder='25'/>
-            </div>
 
         </div>
 
