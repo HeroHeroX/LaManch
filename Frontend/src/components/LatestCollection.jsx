@@ -10,7 +10,7 @@ const LatestCollection = () => {
 
     useEffect(() => {
         setLatestProducts(products.slice(0, 10));
-    },[])
+    },[products])
 
   return (
     <div className='px-4 bg-[#F8F9FA]'>
