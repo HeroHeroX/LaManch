@@ -45,6 +45,16 @@ const placeOrderPayPal = async (req,res) => {
 //ALL ORDERS DATA FOR ADMIN
 const allOrders = async (req,res) => {
     
+    try {
+        
+        const orders = await orderModel.find({})
+        res.json({success:true, orders})
+
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message: error.message})
+    }
+
 }
 
 //USER ORDER DATA FOR FRONTEND
