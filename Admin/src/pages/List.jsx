@@ -51,7 +51,7 @@ const List = ({token}) => {
   }, [])
   return (
     <>
-      <p className='mb-2'>All Products List</p>
+      <p className='mb-2 text-[25px]'>All Products List</p>
       <div className='flex flex-col gap-2'>
 
         {/*----------LIST TABLE------------*/}
