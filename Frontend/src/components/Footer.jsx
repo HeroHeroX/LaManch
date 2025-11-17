@@ -9,7 +9,7 @@ const Footer = () => {
             <div>
                 <img src={assets.logo} className='mb-5 w-48' alt="" />
                 <p className='w-full md:w-2/3 text-gray-500 text-[20px]'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, ullam odit placeat doloremque illum tempora suscipit labore quidem, qui cumque, accusantium quos praesentium error sed saepe nesciunt optio architecto at.
+                    LaManch offers timeless apparel made with durable materials and a focus on effortless shopping, blending minimalist design with everyday comfort. Each piece is created to be versatile, stylish, and long‑lasting, so customers can enjoy fashion that feels both modern and enduring. 
                 </p>
             </div>
 
