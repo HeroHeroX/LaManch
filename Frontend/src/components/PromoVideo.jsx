@@ -8,7 +8,7 @@ const PromoVideo = () => {
       <div className='text-center py-8 text-[35px]'>
         <Title text1={'UPGRADE'} text2={'YOUR STYLE'} />
         <p className='w-3/4 m-auto text-[15px] sm:text-lg md:text-xl text-gray-600'>
-          Discover fashion that blends modern elegance with everyday comfort, designed to inspire confidence in every moment
+          Discover fashion that blends modern elegance with everyday comfort, designed to inspire confidence in every moment.
         </p>
       </div>
 
