@@ -19,7 +19,7 @@ const BestSeller = () => {
       <div className='text-center py-8 text-[35px]'>
         <Title text1={'BEST'} text2={'SELLER'}/>
         <p className='w-3/4 m-auto text-[15px] sm:text-lg md:text-xl text-gray-600'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel dolore deleniti.
+            From sleek silhouettes to premium fabrics, these best sellers are crafted to keep you confident and stylish all season
         </p>
       </div>
 
