@@ -19,7 +19,7 @@ const Footer = () => {
                     <Link to='/'><li>ホーム</li></Link>
                     <Link to='/about'><li>私たちについて</li>
                     <li>配送</li></Link>
-                    <li>- プライバシーポリシー</li>
+                    <li>プライバシーポリシー</li>
                 </ul>
             </div>
 
