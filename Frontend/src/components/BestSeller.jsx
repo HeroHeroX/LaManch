@@ -17,7 +17,7 @@ const BestSeller = () => {
   return (
     <div className='px-4 py-5 bg-[#DFDFDC]'>
       <div className='text-center py-8 text-[35px]'>
-        <Title text1={'人気'} text2={'アイテム'}/>
+        <Title text1={'BEST'} text2={'SELLER'}/>
         <p className='w-3/4 m-auto text-[15px] sm:text-lg md:text-xl text-gray-600'>
             人気アイテムはスタイルと快適さを両立し、毎日着たくなるお気に入りです
         </p>

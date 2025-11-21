@@ -8,51 +8,51 @@ import Title from './Title';
 const CustomerReviews = () => {
   const reviews = [
     {
-      name: "Emily Johnson",
+      name: "エミリー・ジョンソン",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      review: "Absolutely love shopping here! Fast shipping, great quality, and wonderful customer service.",
+      review: "ここでのショッピングが本当に大好きです！発送も早く、品質も素晴らしく、カスタマーサービスも最高でした。",
     },
     {
-      name: "Michael Lee",
+      name: "マイケル・リー",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      review: "The best online shopping experience I've had so far. Highly recommend to everyone!",
+      review: "今までで一番のオンラインショッピング体験でした。皆さんに強くおすすめします！",
     },
     {
-      name: "Sophia Turner",
+      name: "ソフィア・ターナー",
       avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-      review: "Amazing products and the packaging was beautiful! Will definitely shop again.",
+      review: "素敵なアイテムで、パッケージもとても美しかったです！また必ず利用したいと思います。",
     },
     {
-      name: "Hiroshi Tanaka",
+      name: "- 田中宏",
       avatar: "https://randomuser.me/api/portraits/men/9.jpg",
-      review: "Fast delivery and amazing customer service. Will recommend to my friends in Tokyo!",
+      review: "配送がとても早く、カスタマーサービスも素晴らしかったです。東京の友人にもおすすめします！",
     },
     {
-      name: "Amina Yusuf",
+      name: "アミナ・ユスフ",
       avatar: "https://randomuser.me/api/portraits/women/11.jpg",
-      review: "Loved the selection of products! Very impressed with the quality and pricing.",
+      review: "アイテムのセレクションがとても気に入りました！品質と価格の良さにとても感動しました。",
     },
     {
-      name: "Carlos Mendoza",
+      name: "カルロス・メンドーサ",
       avatar: "https://randomuser.me/api/portraits/men/21.jpg",
-      review: "Fantastic experience from start to finish. Great products and friendly support.",
+      review: "最初から最後まで素晴らしい体験でした。アイテムも素敵で、サポートもとても親切でした。",
     },
     {
-      name: "Fatima Al-Sayed",
+      name: "ファティマ・アル",
       avatar: "https://randomuser.me/api/portraits/women/50.jpg",
-      review: "Shopping here is such a pleasure! Excellent service and wonderful packaging.",
+      review: "ここでのショッピングは本当に楽しいです！サービスも素晴らしく、パッケージもとてもおしゃれでした。",
     },
     {
-      name: "James Smith",
+      name: "ジェームズ・スミス",
       avatar: "https://randomuser.me/api/portraits/men/36.jpg",
-      review: "This has become my go-to online store. Top-notch quality and very reliable.",
+      review: "ここは私のお気に入りのオンラインストアになりました。品質は最高で、とても信頼できます。",
     },
   ];
 
   return (
     <div className="py-20 bg-[#f9fafb] text-gray-800 mb-10">
       <div className="text-center text-[25px] mb-12">
-        <Title        text1="CUSTOMER" text2="REVIEWS" />
+        <Title        text1="カスタマー" text2="の評価" />
       </div>
 
       <Swiper

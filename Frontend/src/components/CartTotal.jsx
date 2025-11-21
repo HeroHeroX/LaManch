@@ -9,23 +9,23 @@ const CartTotal = () => {
   return (
     <div className='w-full'>
         <div className='text-2x1'>
-            <Title text1={'CART'} text2={'TOTAL'}/>
+            <Title text1={'カート'} text2={'合計'}/>
         </div>
 
         <div className='flex flex-col gap-4 mt-6 text-sm'>
             <div className='flex justify-between'>
-                <p>Subtotal</p>
-                <p>{currency}{getCartAmount()}.00</p>
+                <p>小計</p>
+                <p>{currency}{getCartAmount()}00</p>
             </div>
             <hr />
             <div className='flex justify-between'>
-                <p>Delivery Fee</p>
-                <p>{currency}{delivery_fee}.00</p>
+                <p>配送料</p>
+                <p>{currency}{delivery_fee}00</p>
             </div>
             <hr />
             <div className='flex justify-between'>
-                <b>Total</b>
-                <b>{currency}{ getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee}.00</b>
+                <b>合計 </b>
+                <b>{currency}{ getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee}00</b>
 
             </div>
         </div>
