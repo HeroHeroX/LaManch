@@ -62,7 +62,7 @@ const Product = () => {
                 <p className='mt-2 text-3x1 font-medium text-[20px]'>{currency}{productData.price}</p>
                 <p className='mt-2 text-gray-500 md:w-4/5 text-[20px]'>{productData.description}</p>
                 <div className='flex flex-col gap-4 my-8'>
-                  <p>Select Size</p>
+                  <p>サイズ選択</p>
                   <div className='flex gap-2'>
                     {productData.sizes.map((item,index) => (
                       <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 cursor-pointer ${item === size ? 'border-orange-500' : ''}`} key={index}>{item}</button>
@@ -72,7 +72,7 @@ const Product = () => {
                 <button onClick={()=>addToCart(productData._id, size)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>カートに追加</button>
                 <hr className='mt-8 sm:w-4/5' />
                 <div className='text-[15px] text-gray-500 mt-4 flex flex-col gap-1'>
-                  <p>100％正規品 </p>
+                  <p>100％正規品</p>
                   <p>この商品は代金引換をご利用いただけます。</p>
                   <p>7日以内の簡単返品・交換ポリシー</p>
                 </div>
