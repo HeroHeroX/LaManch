@@ -72,7 +72,7 @@ const Orders = () => {
                   <p className="text-sm font-medium text-green-600">{item.status}</p>
                 </div>
                 <button onClick={loadOrderData} className="border border-gray-400 px-5 py-2 text-sm font-medium rounded-md hover:bg-gray-300 cursor-pointer transition">
-                  Track Order
+                  注文状況を確認する
                 </button>
               </div>
             </div>

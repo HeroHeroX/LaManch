@@ -69,12 +69,12 @@ const Product = () => {
                     ))}
                   </div>
                 </div>
-                <button onClick={()=>addToCart(productData._id, size)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
+                <button onClick={()=>addToCart(productData._id, size)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>カートに追加</button>
                 <hr className='mt-8 sm:w-4/5' />
                 <div className='text-[15px] text-gray-500 mt-4 flex flex-col gap-1'>
-                  <p>100% Original product</p>
-                  <p>Cash on delivery is available on this product.</p>
-                  <p>Easy return and exchange policy within 7 days</p>
+                  <p>100％正規品 </p>
+                  <p>この商品は代金引換をご利用いただけます。</p>
+                  <p>7日以内の簡単返品・交換ポリシー</p>
                 </div>
             </div>
         </div> 

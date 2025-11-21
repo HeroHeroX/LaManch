@@ -98,28 +98,28 @@ const PlaceOrder = () => {
         {/* Left Side - Order Summary */}
         <div className='flex flex-col gap-4 w-full sm:max-w-[500px]'>
             <div className='text-x1 sm:text-[25px] py-3 px-4'>
-              <Title text1={'DELIVERY'} text2={'INFORMATION'}/>
+              <Title text1={'お届け'} text2={'情報'}/>
             </div>
             <div className='flex gap-3 px-4'>
-                <input required onChange={onChangeHandler} name='firstName' value={formData.firstName} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='First Name' />
-                <input required onChange={onChangeHandler} name='lastName' value={formData.lastName} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='Last Name' />
+              <input required onChange={onChangeHandler} name='lastName' value={formData.lastName} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='姓'/>
+                <input required onChange={onChangeHandler} name='firstName' value={formData.firstName} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='名'/>
             </div>
             <div className='px-4 w-full'>
-                <input required onChange={onChangeHandler} name='email' value={formData.email} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="email" placeholder='Email Address' />
+                <input required onChange={onChangeHandler} name='email' value={formData.email} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="email" placeholder='メール' />
             </div>
             <div className='px-4 w-full'>
-                <input required onChange={onChangeHandler} name='street' value={formData.street} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='Street' />
+                <input required onChange={onChangeHandler} name='street' value={formData.street} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='丁目・番地'/>
             </div>
             <div className='flex gap-3 px-4'>
-                <input required onChange={onChangeHandler} name='city' value={formData.city} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='City' />
-                <input required onChange={onChangeHandler} name='state' value={formData.state} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='State' />
+                <input required onChange={onChangeHandler} name='city' value={formData.city} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='市'/>
+                <input required onChange={onChangeHandler} name='state' value={formData.state} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='都道府県'/>
             </div>
             <div className='flex gap-3 px-4'>
-                <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="number" placeholder='Zip Code' />
-                <input required onChange={onChangeHandler} name='country' value={formData.country} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='Country' />
+                <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="number" placeholder='- 郵便番号'/>
+                <input required onChange={onChangeHandler} name='country' value={formData.country} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="text" placeholder='国'/>
             </div>
             <div className='px-4 w-full'>
-                <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="Number" placeholder='Phone' />
+                <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='border border-gray-600 rounded py-1.5 px-3.5 w-full text-gray-600' type="Number" placeholder='Tel'/>
             </div>
         </div>
 
@@ -129,7 +129,7 @@ const PlaceOrder = () => {
               <CartTotal/>
             </div>
             <div className='mt-12'>
-              <Title text1={'PAYMENT'} text2={'METHOD'}/>
+              <Title text1={'お支払い'} text2={'方法'}/>
               {/*PAYMENT METHOD*/}
               <div className='flex gap-3 flex-col lg:flex-row'>
                   <div onClick={()=>setMethod('stripe')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
@@ -138,12 +138,12 @@ const PlaceOrder = () => {
                   </div>
                   <div onClick={()=>setMethod('cod')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
                       <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'cod' ? 'bg-gray-400' : ''}`}></p>
-                      <p className='text-gray-500 text-sm font-medium mx-2'>CASH ON DELIVERY</p>
+                      <p className='text-gray-500 text-sm font-medium mx-2'>現金払い</p>
                   </div>
               </div>
 
               <div className='w-full text-end mt-8'>
-                  <button type='submit' className='bg-black text-white py-2 px-12 text-sm sm:text-base hover:bg-gray-500 cursor-pointer'>PLACE ORDER</button>
+                  <button type='submit' className='bg-black text-white py-2 px-12 text-sm sm:text-base hover:bg-gray-500 cursor-pointer'>注文を確定する</button>
               </div>
             </div>
         </div>

@@ -61,20 +61,20 @@ const Login = () => {
         <input onChange={(e)=>setName(e.target.value)} value={name}
           type="text"
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
-          placeholder="Name"
+          placeholder="名前"
           required
         />
       )}
       <input onChange={(e)=>setEmail(e.target.value)} value={email}
         type="email"
         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
-        placeholder="Email"
+        placeholder="メール"
         required
       />
       <input onChange={(e)=>setPassword(e.target.value)} value={password}
         type="password"
         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
-        placeholder="Password"
+        placeholder="パスワード"
         required
       />
 
@@ -82,9 +82,9 @@ const Login = () => {
       <div className="w-full flex justify-between text-[15px] text-gray-600">
         <p className="cursor-pointer hover:underline">パスワードをお忘れですか？</p>
         {currentState === 'ログイン' ? (
-          <p onClick={() => setCurrentState('登録')} className="cursor-pointer hover:underline">- 新規登録</p>
+          <p onClick={() => setCurrentState('登録')} className="cursor-pointer hover:underline">新規登録</p>
         ) : (
-          <p onClick={() => setCurrentState('ログイン')} className="cursor-pointer hover:underline">- ログインはこちら</p>
+          <p onClick={() => setCurrentState('ログイン')} className="cursor-pointer hover:underline">ログインはこちら</p>
         )}
       </div>
 
