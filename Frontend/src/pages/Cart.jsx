@@ -33,15 +33,15 @@ const Cart = () => {
   }, [cartItems, products]);
 
   if (loading) {
-    return <div className="text-center py-20">Loading...</div>;
+    return <div className="text-center py-20">読み込み中…</div>;
   }
 
   if (error) {
-    return <div className="text-center py-20 text-red-500">Error: {error}</div>;
+    return <div className="text-center py-20 text-red-500">エーラ： {error}</div>;
   }
 
   if (!cartData.length) {
-    return <div className="text-center text-[25px] py-20">Your cart is empty</div>;
+    return <div className="text-center text-[25px] py-20">カートに商品は入っていません</div>;
   }
 
   return (
@@ -138,7 +138,7 @@ const Cart = () => {
               onClick={() => navigate('/place-order')}
               className="bg-black text-white text-sm my-8 px-8 py-3 cursor-pointer"
             >
-              PROCEED TO CHECKOUT
+              購入手続きへ進む
             </button>
           </div>
         </div>
