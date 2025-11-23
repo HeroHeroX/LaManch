@@ -101,7 +101,7 @@ const Add = ({token}) => {
         <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
 
             <div>
-                <p className='mb-2 text-[20px]'>- 販売価格</p>
+                <p className='mb-2 text-[20px]'>販売価格</p>
                 <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="Number" placeholder='25'/>
             </div>
 
@@ -149,7 +149,7 @@ const Add = ({token}) => {
 
         <div className='flex gap-2 mt-2'>
             <input onChange={() => setBestseller(prev => !prev)} checked={bestseller} type="checkbox" id='bestseller' />
-            <label className='cursor-pointer text-[20px]' htmlFor="bestseller">- 人気商品に追加</label>
+            <label className='cursor-pointer text-[20px]' htmlFor="bestseller">人気商品に追加</label>
         </div>
 
         <button type='submit' className='w-28 py-3 mt-4 bg-black text-white cursor-pointer hover:bg-gray-500'>追加</button>
