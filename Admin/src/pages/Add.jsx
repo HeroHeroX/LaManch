@@ -67,7 +67,7 @@ const Add = ({token}) => {
     <div>
       <form onSubmit={onSubmitHandler} className='flex flex-col w-full items-start gap-3'>
         <div>
-            <p className='mb-2 text-[25px]'>Upload Image</p>
+            <p className='mb-2 text-[25px]'>画像をアップロード</p>
         </div>
         <div className='flex gap-2'>
             <label htmlFor="image1">
@@ -89,37 +89,37 @@ const Add = ({token}) => {
         </div>
 
         <div className='w-full'>
-            <p className='mb-2 text-[20px]'>Product Name</p>
+            <p className='mb-2 text-[20px]'>商品名</p>
             <input onChange={(e)=>setName(e.target.value)} value={name} className='w-full max-w-[500px] px-3 py-2' type="text" placeholder='Type here' required />
         </div>
 
         <div className='w-full'>
-            <p className='mb-2 text-[20px]'>Product description</p>
+            <p className='mb-2 text-[20px]'>商品説明</p>
             <textarea onChange={(e)=>setDescription(e.target.value)} value={description} className='w-full max-w-[500px] px-3 py-2' type="text" placeholder='Content here' required />
         </div>
 
         <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
 
             <div>
-                <p className='mb-2 text-[20px]'>Product Price</p>
+                <p className='mb-2 text-[20px]'>- 販売価格</p>
                 <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="Number" placeholder='25'/>
             </div>
 
             <div>
-                <p className='mb-2 text-[20px]'>Product Category</p>
+                <p className='mb-2 text-[20px]'>カテゴリー</p>
                 <select onChange={(e)=>setCategory(e.target.value)} className='w-full px-3 py-2'>
-                    <option value="Men">Men</option>
-                    <option value="Women">Women</option>
-                    <option value="Kids">Kids</option>
+                    <option value="Men">メンズ</option>
+                    <option value="Women">ウィメンズ</option>
+                    <option value="Kids">キッズ</option>
                 </select>
             </div>
 
             <div>
-                <p className='mb-2 text-[20px]'>Sub Category</p>
+                <p className='mb-2 text-[20px]'>サブカテゴリー</p>
                 <select onChange={(e)=>setSubCategory(e.target.value)} className='w-full px-3 py-2'>
-                    <option value="Topwear">Topwear</option>
-                    <option value="Bottomwear">Bottomwear</option>
-                    <option value="Winterwear">Winterwear</option>
+                    <option value="Topwear">トップス</option>
+                    <option value="Bottomwear">ボトムス</option>
+                    <option value="Winterwear">冬服</option>
                 </select>
             </div>
 
@@ -127,7 +127,7 @@ const Add = ({token}) => {
         </div>
 
         <div>
-            <p className='mb-2 text-[20px]'>Product Sizes</p>
+            <p className='mb-2 text-[20px]'>サイズ</p>
             <div className='flex gap-3'>
                 <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter((size) => size !== "S") : [...prev, "S"])}>
                     <p className={`${sizes.includes("S") ? "bg-gray-400" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>S</p>
@@ -149,10 +149,10 @@ const Add = ({token}) => {
 
         <div className='flex gap-2 mt-2'>
             <input onChange={() => setBestseller(prev => !prev)} checked={bestseller} type="checkbox" id='bestseller' />
-            <label className='cursor-pointer text-[20px]' htmlFor="bestseller">Add to bestseller</label>
+            <label className='cursor-pointer text-[20px]' htmlFor="bestseller">- 人気商品に追加</label>
         </div>
 
-        <button type='submit' className='w-28 py-3 mt-4 bg-black text-white cursor-pointer hover:bg-gray-500'>ADD</button>
+        <button type='submit' className='w-28 py-3 mt-4 bg-black text-white cursor-pointer hover:bg-gray-500'>追加</button>
         
       </form>
     </div>

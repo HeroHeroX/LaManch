@@ -51,16 +51,16 @@ const List = ({token}) => {
   }, [])
   return (
     <>
-      <p className='mb-2 text-[25px]'>All Products List</p>
+      <p className='mb-2 text-[25px]'>商品一覧</p>
       <div className='flex flex-col gap-2'>
 
         {/*----------LIST TABLE------------*/}
         <div className='hidden md:grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center px-2 py-1 bg-gray-300 text-sm'>
-          <b>Image</b>
-          <b>Name</b>
-          <b>Category</b>
-          <b>Price</b>
-          <b className='text-center'>Action</b>
+          <b>画像</b>
+          <b>商品名</b>
+          <b>カテゴリー</b>
+          <b>Price値段</b>
+          <b className='text-center'>- アクション</b>
         </div>
 
         {/*-----------PRODUCT LIST----------- */}

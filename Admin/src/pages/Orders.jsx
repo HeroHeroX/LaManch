@@ -60,7 +60,7 @@ const Orders = ({token}) => {
   return (
     <div>
         
-        <h3 className='text-[25px]'>Order Page
+        <h3 className='text-[25px]'>注文ページ
           {
             orders.map((order,index)=>(
               <div className='grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr] gap-3 items-start border-2 border-gray-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700' key={index}>
@@ -92,11 +92,11 @@ const Orders = ({token}) => {
                 </div>
                 <p className='text-sm sm:text-[15px]'>{currency}{order.amount}</p>
                 <select onChange={(event)=>statusHandler(event, order._id)} value={order.status} className='p-2 font-semibold'>
-                  <option value="Order Placed">Order Placed</option>
-                  <option value="Packing">Packing</option>
-                  <option value="Shipped">Shipped</option>
-                  <option value="Out For Delivery">Out For Delivery</option>
-                  <option value="Delivered">Delivered</option>
+                  <option value="Order Placed">注文完了</option>
+                  <option value="Packing">パッキング</option>
+                  <option value="Shipped">- 配送済み</option>
+                  <option value="Out For Delivery">配達中</option>
+                  <option value="Delivered">- 配送完了</option>
                 </select>
               </div>
             ))
