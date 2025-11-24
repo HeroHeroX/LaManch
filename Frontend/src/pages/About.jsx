@@ -18,7 +18,7 @@ const About = () => {
           alt="About Us"
           className="w-full md:max-w-[450px] rounded-lg shadow-md object-cover"
         />
-        <div className="flex flex-col gap-2 md:w-2/4 max-w-[1000px]">
+        <div class="flex flex-col gap-2 md:w-2/4 max-w-[1000px] mx-auto">
           <p className="text-2xl font-semibold text-gray-800">
             LaManchへようこそ！
 
