@@ -16,6 +16,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import BackToTop from "./components/BackToTop";
 import SmoothScroll from "./components/SmoothScroll";
 import Verify from "./pages/Verify";
+import ChatbotAI from "./components/ChatbotAI";
 
  const App = () => {
    return (
@@ -38,6 +39,7 @@ import Verify from "./pages/Verify";
           <Route path="/verify" element={<Verify/>} />
        </Routes>
        <Footer />
+       <ChatbotAI />
      </div>
    );
  }
