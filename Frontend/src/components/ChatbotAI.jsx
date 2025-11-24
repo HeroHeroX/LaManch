@@ -69,7 +69,7 @@ const ChatbotAI = () => {
       
       {/* Nút mở/đóng Chat */}
       <button 
-        className="w-14 h-14 bg-red-600 text-white rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors"
+        className="w-14 h-14 bg-black-600 text-white rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
