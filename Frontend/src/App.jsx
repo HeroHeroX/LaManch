@@ -16,7 +16,6 @@ import toast, { Toaster } from 'react-hot-toast';
 import BackToTop from "./components/BackToTop";
 import SmoothScroll from "./components/SmoothScroll";
 import Verify from "./pages/Verify";
-import TawkToScript from "./components/TawkToScript";
 
  const App = () => {
    return (
@@ -39,7 +38,6 @@ import TawkToScript from "./components/TawkToScript";
           <Route path="/verify" element={<Verify/>} />
        </Routes>
        <Footer />
-       <TawkToScript /> {/* <-- BƯỚC 2: RENDER (Đặt ở đây là đúng) */}
      </div>
    );
  }
