@@ -32,3 +32,15 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+// backend/server.js (Ví dụ)
+
+// ... các imports khác ...
+const chatRoutes = require('./routes/chatRoutes'); // <-- Dòng 1: Import route mới
+
+// ... các middlewares (cors, json parser) ...
+
+// Sử dụng Chat Route (ví dụ: app.use('/api', chatRoutes))
+app.use('/api', chatRoutes); // <-- Dòng 2: Tích hợp route (Endpoint là /api/chat)
+
+// ... các app.use() cho các route khác ...
