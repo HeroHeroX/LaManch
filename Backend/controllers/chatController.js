@@ -1,6 +1,7 @@
-// backend/controllers/chatController.js
+// backend/controllers/chatController.js (PHIÊN BẢN ES MODULES)
 
-const { GoogleGenAI } = require('@google/genai');
+// Thay đổi: Dùng import thay cho require()
+import { GoogleGenAI } from '@google/genai';
 
 // Khởi tạo Gemini AI (sử dụng Khóa API từ .env)
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }); 
@@ -14,7 +15,8 @@ const getChatResponse = async (req, res) => {
 
     try {
         // Cấu hình vai trò cho Chatbot La Manch
-        const systemInstruction = `Bạn là trợ lý AI thân thiện, chuyên nghiệp cho cửa hàng thời trang La Manch. Nhiệm vụ của bạn là tư vấn, trả lời các câu hỏi về sản phẩm, size, chính sách đổi trả, và giới thiệu các sản phẩm hot. Luôn giữ giọng điệu thân thiện. KHÔNG được trả lời các câu hỏi ngoài phạm vi giày và cửa hàng La Manch.`;
+        // (Nếu La Manch bán cả thời trang ngoài giày, bạn có thể sửa lại System Instruction này)
+        const systemInstruction = `Bạn là trợ lý AI thân thiện, chuyên nghiệp cho cửa hàng thời trang La Manch. Nhiệm vụ của bạn là tư vấn, trả lời các câu hỏi về sản phẩm, size, chính sách đổi trả, và giới thiệu các sản phẩm hot. Luôn giữ giọng điệu thân thiện. KHÔNG được trả lời các câu hỏi ngoài phạm vi thời trang và cửa hàng La Manch.`;
         
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash', 
@@ -33,4 +35,5 @@ const getChatResponse = async (req, res) => {
     }
 };
 
-module.exports = { getChatResponse };
+// Thay đổi: Dùng export default thay cho module.exports
+export default getChatResponse;
