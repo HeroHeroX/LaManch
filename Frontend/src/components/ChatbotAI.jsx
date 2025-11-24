@@ -80,7 +80,7 @@ const ChatbotAI = () => {
         // Đặt bottom-16 để khung chat mở lên từ nút
         <div className="w-80 h-96 bg-white border border-gray-300 rounded-lg shadow-2xl absolute bottom-16 right-0 flex flex-col">
           
-          <div className="p-3 bg-black-600 text-white rounded-t-lg font-bold">
+          <div className="p-3 bg-black text-white rounded-t-lg font-bold">
             La Manch AIアシスタント
           </div>
 
@@ -122,7 +122,7 @@ const ChatbotAI = () => {
               placeholder="靴やサイズについて質問..."
             />
             <button
-              className="bg-black-600 text-white p-2 rounded-r-lg hover:bg-red-700 disabled:opacity-50 transition-colors"
+              className="bg-black text-white p-2 rounded-r-lg disabled:opacity-50 transition-colors"
               onClick={sendMessage}
               disabled={isLoading}
             >
