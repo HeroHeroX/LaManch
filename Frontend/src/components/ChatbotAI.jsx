@@ -62,7 +62,7 @@ const ChatbotAI = () => {
       
       {/* Nút mở/đóng Chat - KÍCH THƯỚC ĐỒNG BỘ (p-3) */}
       <button 
-        className="fixed bottom-4 right-3 p-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-500 transition-all duration-300 z-50 cursor-pointer"
+        className="fixed bottom-12 right-3 p-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-500 transition-all duration-300 z-50 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Chatbot"
       >
