@@ -12,7 +12,7 @@ const About = () => {
         <Title text1="私たち" text2="について" />
       </div>
 
-      <div className="flex flex-col md:flex-row items-center gap-16 mb-20">
+      <div className="flex flex-col md:flex-row items-center gap-16 mb-20 mx-auto">
         <img
           src={assets.about_img}
           alt="About Us"
