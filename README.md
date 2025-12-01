@@ -21,7 +21,7 @@ ECサイト（オンラインショップ）です。
 
  Cookieを利用したログイン維持機能で、複数デバイスからのアクセスが可能
 
- Chatbotを追加
+ ChatbotはChatlingを使って追加しました
 
 開発環境：
 Visual Studio Code, 
