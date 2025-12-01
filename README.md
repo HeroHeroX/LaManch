@@ -1,4 +1,4 @@
-アプリ・システム開発をまとめ
+  アプリ・システム開発をまとめ
 
 概要
 
@@ -39,4 +39,4 @@ https://la-manch-frontend.vercel.app/
 
 https://la-manch-admin.vercel.app/
 
-Email:admin@lamanch.com パスワード:admin123
+メール：admin@lamanch.com パスワード：admin123
