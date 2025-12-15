@@ -16,7 +16,7 @@ const loginUser = async (req, res) => {
     const user = await userModel.findOne({ email });
 
     if (!user) {
-      return res.json({ success: false, message: "User does not exist" });
+      return res.json({ success: false, message: "ユーザーは存在しません" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -25,7 +25,7 @@ const loginUser = async (req, res) => {
       const token = createToken(user._id);
       res.json({ success: true, token });
     } else {
-      res.json({ success: false, message: "Invalid credentials" });
+      res.json({ success: false, message: "IDまたはパスワードが正しくありません" });
     }
   } catch (error) {
     console.log(error);
@@ -41,17 +41,17 @@ const registerUser = async (req, res) => {
     //Check if user already exists
     const exsits = await userModel.findOne({ email });
     if (exsits) {
-      return res.json({ success: false, message: "User already exists" });
+      return res.json({ success: false, message: "すでに登録されているユーザーです" });
     }
 
     //Validate email and password
     if (!validator.isEmail(email)) {
-      return res.json({ success: false, message: "Invalid email" });
+      return res.json({ success: false, message: "メールアドレスが正しくありません" });
     }
     if (password.length < 8) {
       return res.json({
         success: false,
-        message: "The password must be at least 8 characters long",
+        message: "パスワードは最低8文字必要です",
       });
     }
 
@@ -83,7 +83,7 @@ const adminLogin = async (req, res) => {
 
     // Kiểm tra email và password có được gửi không
     if (!email || !password) {
-      return res.status(400).json({ success: false, message: 'Please provide email and password' });
+      return res.status(400).json({ success: false, message: 'メールとパスワードを入力してください' });
     }
 
     // Thông tin admin từ biến môi trường
@@ -92,7 +92,7 @@ const adminLogin = async (req, res) => {
 
     // Kiểm tra email và password
     if (email !== adminEmail || password !== adminPassword) {
-      return res.status(401).json({ success: false, message: 'Invalid email or password' });
+      return res.status(401).json({ success: false, message: 'メールアドレスまたはパスワードが正しくありません' });
     }
 
     // Tạo JWT token
@@ -102,7 +102,7 @@ const adminLogin = async (req, res) => {
     res.status(200).json({ success: true, token });
   } catch (error) {
     console.error('Login error:', error);
-    res.status(500).json({ success: false, message: 'Server error' });
+    res.status(500).json({ success: false, message: 'サーバーでエラーが発生しました' });
   }
 };
 

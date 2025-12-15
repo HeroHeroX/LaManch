@@ -3,7 +3,7 @@ import userModel from "../models/userModel.js";
 import Stripe from 'stripe'
 
 //GLOBAL VARIABELS
-const currency = "usd"
+const currency = "yen"
 const deliveryCharge = 10
 
 //GATEWAY INITIALIZE
@@ -31,7 +31,7 @@ const placeOrder = async (req,res) => {
 
         await userModel.findByIdAndUpdate(userId,{cartData:{}})
 
-        res.json({success:true, message:"Order Placed"})
+        res.json({success:true, message:"ご注文が完了しました"})
 
     } catch (error) {
         console.log(error);
@@ -163,7 +163,7 @@ const updateStatus = async (req,res) => {
         const { orderId, status} = req.body
 
         await orderModel.findByIdAndUpdate(orderId, { status })
-        res.json({success:true, message:'Status Updated'})
+        res.json({success:true, message:'ステータスが更新されました'})
 
     } catch (error) {
         console.log(error);
