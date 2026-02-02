@@ -57,10 +57,10 @@ const Orders = () => {
                   <p className="text-base font-semibold">{item.name}</p>
                   <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                     <p className="text-gray-800 font-medium">{currency}{item.price}</p>
-                    <p>Quantity: {item.quantity}</p>
-                    <p>Size: {item.size}</p>
+                    <p>数量: {item.quantity}</p>
+                    <p>サイズ: {item.size}</p>
                   </div>
-                  <p className="text-sm text-gray-400">{new Date(item.date).toDateString()}</p>
+                  <p className="text-sm text-gray-400">{new Date(item.date).toDateString("ja-JP")}</p>
                   <p className="text-sm text-gray-400">{item.paymentMethod}</p>
                 </div>
               </div>
