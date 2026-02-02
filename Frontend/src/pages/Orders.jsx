@@ -60,7 +60,13 @@ const Orders = () => {
                     <p>数量: {item.quantity}</p>
                     <p>サイズ: {item.size}</p>
                   </div>
-                  <p className="text-sm text-gray-400">{new Date(item.date).toDateString("ja-JP")}</p>
+                  <p className="text-sm text-gray-400">
+  {new Intl.DateTimeFormat("ja-JP", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long",
+  }).format(new Date(item.date))}</p>
                   <p className="text-sm text-gray-400">{item.paymentMethod}</p>
                 </div>
               </div>
